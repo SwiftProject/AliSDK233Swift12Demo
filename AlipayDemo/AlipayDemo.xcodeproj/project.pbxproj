@@ -27,6 +27,7 @@
 		9BE91B021B9EB7020011DCD3 /* openssl_wrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE91AF21B9EB7020011DCD3 /* openssl_wrapper.m */; };
 		9BE91B031B9EB7020011DCD3 /* RSADataSigner.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE91AF41B9EB7020011DCD3 /* RSADataSigner.m */; };
 		9BE91B041B9EB7020011DCD3 /* RSADataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 9BE91AF61B9EB7020011DCD3 /* RSADataVerifier.m */; };
+		9BE91B061B9EC2B90011DCD3 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BE91B051B9EC2B90011DCD3 /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -150,6 +151,8 @@
 		9BE91AF41B9EB7020011DCD3 /* RSADataSigner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSADataSigner.m; sourceTree = "<group>"; };
 		9BE91AF51B9EB7020011DCD3 /* RSADataVerifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSADataVerifier.h; sourceTree = "<group>"; };
 		9BE91AF61B9EB7020011DCD3 /* RSADataVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSADataVerifier.m; sourceTree = "<group>"; };
+		9BE91B051B9EC2B90011DCD3 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9BE91B821B9F098A0011DCD3 /* AlipayDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AlipayDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -157,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BE91B061B9EC2B90011DCD3 /* SystemConfiguration.framework in Frameworks */,
 				9BE91AFA1B9EB7020011DCD3 /* libcrypto.a in Frameworks */,
 				9BE91AF81B9EB7020011DCD3 /* AlipaySDK.framework in Frameworks */,
 				9BE91AFB1B9EB7020011DCD3 /* libssl.a in Frameworks */,
@@ -176,6 +180,7 @@
 		9BE91A621B9EB4EF0011DCD3 = {
 			isa = PBXGroup;
 			children = (
+				9BE91B051B9EC2B90011DCD3 /* SystemConfiguration.framework */,
 				9BE91A6D1B9EB4EF0011DCD3 /* AlipayDemo */,
 				9BE91A831B9EB4EF0011DCD3 /* AlipayDemoTests */,
 				9BE91A6C1B9EB4EF0011DCD3 /* Products */,
@@ -201,6 +206,7 @@
 				9BE91A771B9EB4EF0011DCD3 /* Images.xcassets */,
 				9BE91A791B9EB4EF0011DCD3 /* LaunchScreen.xib */,
 				9BE91A6E1B9EB4EF0011DCD3 /* Supporting Files */,
+				9BE91B821B9F098A0011DCD3 /* AlipayDemo-Bridging-Header.h */,
 			);
 			path = AlipayDemo;
 			sourceTree = "<group>";
@@ -596,13 +602,21 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AlipayDemo/AliSDK2_2_3",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode_6_4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/AlipayDemo/AliSDK2_2_3",
+				);
 				INFOPLIST_FILE = AlipayDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AlipayDemo/AliSDK2_2_3",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlipayDemo/AlipayDemo-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -614,13 +628,21 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AlipayDemo/AliSDK2_2_3",
 				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode_6_4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(PROJECT_DIR)/AlipayDemo/AliSDK2_2_3",
+				);
 				INFOPLIST_FILE = AlipayDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/AlipayDemo/AliSDK2_2_3",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AlipayDemo/AlipayDemo-Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -677,6 +699,7 @@
 				9BE91A8C1B9EB4EF0011DCD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9BE91A8D1B9EB4EF0011DCD3 /* Build configuration list for PBXNativeTarget "AlipayDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -685,6 +708,7 @@
 				9BE91A8F1B9EB4EF0011DCD3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
