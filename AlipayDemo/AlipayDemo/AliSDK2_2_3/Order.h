@@ -30,5 +30,6 @@
 
 @property(nonatomic, readonly) NSMutableDictionary * extraParams;
 
++ (NSString *)generateTradeNO;
 
 @end
